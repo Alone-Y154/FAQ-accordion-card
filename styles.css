@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  display: flex;
+  background: white;
+  width: 1200px;
+  height: 600px;
+  margin-top: 10rem;
+  border-radius: 25px;
+}
+
+.faq-img {
+  display: flex;
+  flex-direction: column;
+  /* border-right: 1px solid black; */
+  background: url("images/bg-pattern-desktop.svg");
+  background-position: 188% 75%;
+  background-repeat: no-repeat;
+}
+
+.faq-img-women {
+  display: flex;
+  /* display: none; */
+  /* overflow: hidden; */
+}
+
+.faq-cube {
+  /* margin-top: 15rem;
+  margin-left: -6rem; */
+  z-index: 3;
+  position: relative;
+  top: 15rem;
+  left: -5.85rem;
+  transition: ease;
+  animation: float 2s infinite;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-16px);
+  }
+
+  50% {
+    transform: translateY(16px);
+  }
+
+  to {
+    transform: translateY(-16px);
+  }
+}
+
+.faq-women {
+  /* margin-top: 6.5rem;
+  margin-left: -11rem; */
+  position: relative;
+  top: 6.5rem;
+  left: -12rem;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.women-svg {
+  position: relative;
+  right: 5rem;
+  /* width: 472px;
+  height: 359px; */
+}
+
+.women-svg-mobile {
+  display: none;
+}
+/* .faq-container .faq-img-shadow {
+  overflow: hidden;
+} */
+.faq-img-shadow img {
+  /* width: 472px;
+  height: 359px; */
+  /* position: relative;
+  z-index: 1;
+  bottom: 39rem;
+  right: 36rem; */
+  margin-top: -39rem;
+  margin-left: -36rem;
+}
+
+.faq-content {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: -5rem;
+}
+
+.faq-heading p {
+  font-size: 3rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.faq-question p {
+  color: hsl(237, 12%, 33%);
+}
+
+.faq-question span {
+  transition: transform 0.5s ease-in;
+}
+
+.faq {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1rem;
+}
+
+.faq-question-click .question {
+  color: hsl(238, 29%, 16%);
+  font-weight: bold;
+}
+
+.faq-question-click span {
+  transform: rotate(180deg);
+}
+
+.faq-question-click .answer {
+  display: block;
+}
+
+.faq-question p:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+/* .faq-content hr {
+  border: none;
+  background: lightgray;
+  height: 1px;
+} */
+.faq-ans p {
+  display: none;
+  color: hsl(240, 6%, 50%);
+  width: 450px;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: fade 1s ease-in-out;
+}
+
+.faq-question-click .answer {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .faq-container {
+    width: 1000px;
+  }
+  .faq-content {
+    margin-top: 4rem;
+    margin-left: -15rem;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .faq-container {
+    width: 375px;
+    flex-direction: column;
+  }
+  .faq-content {
+    margin-top: 4rem;
+    margin-left: -15rem;
+  }
+
+  .women-svg-mobile {
+    display: block;
+  }
+
+  .women-svg {
+    display: none;
+  }
+  .faq-cube {
+    display: none;
+  }
+  .faq-women {
+    position: relative;
+    top: 0rem;
+    left: 0px;
+    z-index: 0;
+    margin-top: -7.5rem;
+    margin-left: 50px;
+    width: 275px;
+    height: 275px;
+    animation: float 3s infinite;
+}
+
+
+
+    .faq-img {
+      background: url("images/bg-pattern-mobile.svg");
+      background-position: 50% 0%;
+      background-repeat: no-repeat;
+    }
+
+    .faq-content {
+      margin-top: 0rem;
+      margin-left: 0rem;
+        gap: 0rem;
+    }
+
+
+    .faq-heading {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .faq {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: 0.25rem;
+    }
+
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      width: 315px;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+
+    .faq-ans p {
+      width: 325px;
+      line-height: 1.5rem;
+    }
+
+    .attribution {
+      font-size: 12px;
+    }
+
+}
